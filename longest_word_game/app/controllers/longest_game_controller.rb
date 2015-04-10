@@ -11,7 +11,7 @@ class LongestGameController < ApplicationController
   def score
     @word = params[:word]
     @start_time = params[:start_time].to_datetime
-    @end_time = params[:end_time].to_datetime
+    @end_time = Time.now
     @grid = params[:grid].split(",")
     @score = run_game(@word, @grid, @start_time, @end_time)[:score].to_i
     @message = run_game(@word, @grid, @start_time, @end_time)[:message]
@@ -30,7 +30,7 @@ class LongestGameController < ApplicationController
   end
 
   def result(length, time)
-    length - time / 10
+    length - time / 100000
   end
 
   def message(score)

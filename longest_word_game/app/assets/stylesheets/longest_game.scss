@@ -1,3 +1,33 @@
 // Place all the styles related to the longestGame controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#grid {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#form {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#word {
+  line-height:2em;
+  width: 40%;
+}
+
+
+body {
+  text-align:center;
+  font-family: verdana;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 10px;
+}
