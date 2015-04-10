@@ -1,0 +1,17 @@
+<%= @grid %>
+<% start_time = Time.now %>
+<% string = @grid.join(",") %>
+
+
+
+
+
+<form action="/longest_game/score" method="get">
+  <label for="word">Enter your word</label>
+  <input type="text" id="word" name="word" place-holder="Type your word here">
+  <input type="hidden" name="end_time" value=<%=Time.now%>>
+  <input type="hidden" name="start_time" value=<%=start_time%>>
+  <input type="hidden" name="grid" value=<%=string%>>
+
+  <input type="submit">
+</form>
